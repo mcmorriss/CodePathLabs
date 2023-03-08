@@ -2,6 +2,24 @@ import React, {Component, useState} from 'react'
 
 const BaristaForm = () => {
 
+    const [inputs, setInputs] = useState({
+        'temperature': '',
+        'milk': '',
+        'syrup': '',
+        'blended': ''
+    })
+
+    const ingredients = {
+        'temperature': ['hot', 'lukewar', 'cold'],
+        'milk': ['mocha', 'vanilla', 'toffee', 'maple', 'caramel', 'other', 'none'],
+        'syrup': ['cow', 'oat', 'goat', 'almond', 'none'],
+        'blended': ['yes', 'turbo', 'no'],
+    }
+
+    
+
+
+
     const onNewDrink = () => {
     }
 
@@ -15,6 +33,7 @@ const BaristaForm = () => {
             <h2>Hi, I'd like to order a:</h2>
 
         </form>
+
         <button type='submit' className='button submit' onClick={onCheckAnswer}>
             Check Answer
         </button>
